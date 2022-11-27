@@ -9,18 +9,122 @@ var hour15 = $('#hour-15');
 var hour16 = $('#hour-16');
 var hour17 = $('#hour-17');
 
-function colorTimeblocks() {
-  if (dayjs().format('hh') === 09) {
-    hour9.color = "Red";
+$(function colorTimeblock9() {
+  if (dayjs().hour() === 09) {
+    hour9.addClass("row time-block present");
   }
-  else if (dayjs().format('hh') > 09) {
-    hour9.color = "Grey";
+  else if (dayjs().hour() > 09) {
+    hour9.addClass("row time-block past");
   }
   else {
-    hour9.color = "Green";
+    hour9.addClass("row time-block future");
   }
 
-}
+});
+
+$(function colorTimeblock10() {
+  if (dayjs().hour() === 10) {
+    hour10.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 10) {
+    hour10.addClass("row time-block past");
+  }
+  else {
+    hour10.addClass("row time-block future");
+  }
+
+});
+
+$(function colorTimeblock11() {
+  if (dayjs().hour() === 11) {
+    hour11.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 11) {
+    hour11.addClass("row time-block past");
+  }
+  else {
+    hour11.addClass("row time-block future");
+  }
+
+});
+
+$(function colorTimeblock12() {
+  if (dayjs().hour() === 12) {
+    hour12.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 12) {
+    hour12.addClass("row time-block past");
+  }
+  else {
+    hour12.addClass("row time-block future");
+  }
+
+});
+
+$(function colorTimeblock13() {
+  if (dayjs().hour() === 13) {
+    hour13.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 13) {
+    hour13.addClass("row time-block past");
+  }
+  else {
+    hour13.addClass("row time-block future");
+  }
+
+});
+
+$(function colorTimeblock14() {
+  if (dayjs().hour() === 14) {
+    hour14.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 14) {
+    hour14.addClass("row time-block past");
+  }
+  else {
+    hour14.addClass("row time-block future");
+  }
+
+});
+
+$(function colorTimeblock15() {
+  if (dayjs().hour() === 15) {
+    hour15.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 15) {
+    hour15.addClass("row time-block past");
+  }
+  else {
+    hour15.addClass("row time-block future");
+  }
+
+});
+
+$(function colorTimeblock16() {
+  if (dayjs().hour() === 16) {
+    hour16.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 16) {
+    hour16.addClass("row time-block past");
+  }
+  else {
+    hour16.addClass("row time-block future");
+  }
+
+});
+
+$(function colorTimeblock17() {
+  if (dayjs().hour() === 17) {
+    hour17.addClass("row time-block present");
+  }
+  else if (dayjs().hour() > 17) {
+    hour17.addClass("row time-block past");
+  }
+  else {
+    hour17.addClass("row time-block future");
+  }
+
+});
 
 function displayTime() {
     timeDisplayEl.text(dayjs().format('dddd, MMM DD, YYYY [at] hh:mm:ss a'));
