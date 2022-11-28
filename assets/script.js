@@ -138,11 +138,17 @@ $(function colorTimeblock17() {
 });
 
 $(".saveBtn").on("click",function(){
-  console.log($(this).parent().attr("id"));
-  console.log($(this).siblings("textarea").val())
+  localStorage.setItem(($(this).parent().attr("id")), ($(this).siblings("textarea").val()));
   // using this.parent.id as the key and this.siblings.val() we can set the local storage 
 })
 
+//1. $("row").each
+//2. localStorage.getItem$(this)
+//3. set child element value to $(this). appendChild()?
+
+//$(row).each(function(){
+  //localStorage.getItem(($(this).parent().attr("id")), ($(this).siblings("textarea").val()));
+//})
 
 function displayTime() {
     timeDisplayEl.text(dayjs().format('dddd, MMM DD, YYYY [at] hh:mm:ss a'));
