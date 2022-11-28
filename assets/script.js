@@ -137,14 +137,11 @@ $(function colorTimeblock17() {
 
 });
 
-$(function saveInput () {
-  localStorage.setItem(document.querySelector("#hour9"))
-});
-
-$(function () {
-  hour9Btn.addEventListener("click", saveInput)
-  
-});
+$(".saveBtn").on("click",function(){
+  console.log($(this).parent().attr("id"));
+  console.log($(this).siblings("textarea").val())
+  // using this.parent.id as the key and this.siblings.val() we can set the local storage 
+})
 
 
 function displayTime() {
